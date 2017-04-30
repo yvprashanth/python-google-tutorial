@@ -9,3 +9,4 @@ def digitSum(n):
         return lastDigit + digitSum(n/10)
 
 print digitSum(-1729)
+print digitSum(1729)
