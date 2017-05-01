@@ -8,5 +8,8 @@ def digitSum(n):
         lastDigit = n % 10
         return lastDigit + digitSum(n/10)
 
-print digitSum(-1729)
-print digitSum(1729)
+# print digitSum(-1729)
+
+po = pow(1729, 100)
+# print po
+print digitSum(po)
