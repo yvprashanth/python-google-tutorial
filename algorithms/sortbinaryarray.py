@@ -3,6 +3,7 @@
 # Output = { 0, 0, 0, 0, 1, 1, 1, 1 }
 
 import random
+import time
 
 def sort(input):
     numberofzeros = 0
@@ -13,7 +14,6 @@ def sort(input):
     ones = [1] * (len(input) - numberofzeros)
     return zeros + ones
 
-
 def anothersort(input):
     left = 0
     right = len(input) - 1
@@ -22,16 +22,19 @@ def anothersort(input):
             left += 1
         while (input[right] == 1 and left < right):
             right -= 1
-
         if (left < right):
             input[left] = 0
             input[right] = 1
             left += 1
             right -= 1
 
-inputdata = [1, 0, 1, 0, 1, 0, 0, 1]
+inputdata = [1, 0, 1, 0, 1, 0, 0, 1, 0, 1]
 
+starttime = time.time()
 anothersort(inputdata)
+endtime = time.time()
 
 print inputdata
+print("--- %s seconds ---" % (time.time() - starttime))
+
 
