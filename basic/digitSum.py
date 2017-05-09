@@ -1,3 +1,4 @@
+# Sum of all digits in a number
 def digitSum(n):
     if n >= 0 and n < 10:
         return n
